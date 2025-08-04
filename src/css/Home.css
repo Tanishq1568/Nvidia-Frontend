@@ -1,0 +1,106 @@
+.navbar .nav-link {
+  text-decoration: none !important;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: none !important;
+}
+
+.custom-carousel {
+  height: 400p  x;
+}
+
+.navbar {
+  margin-bottom: 3px;
+}
+.dropdown-menu.bg-dark .dropdown-item:hover {
+  background-color: #000 !important;
+  color: #000000 !important;
+}
+
+/* Add this in your CSS file or inside a <style> tag */
+.custom-toggler {
+  background-color: black;
+  border: none;
+  padding: 8px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.carousel-background {
+  position:relative;
+  background-size: cover; /* ✅ Show the full image */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+   /* background-size: 1000px; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 3%; /* Align content to the left */
+  transform: translateY(-50%); /* Center vertically only */
+  text-align: left;
+  color: white;
+}
+
+.overlay-heading {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.shop-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #e85b50;
+}
+
+.dropdown-item {
+  text-decoration: none !important; /* Removes underline */
+  font-weight: 600 !important; 
+  cursor: pointer;     /* Makes text semi-bold */
+}
+
+/* Style for the dropright submenu */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  display: none;
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Optional: Styling enhancements */
+.dropdown-item {
+  font-weight: 600;
+  text-decoration: none;
+}
+
