@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Dashboard from './Components/Dashboard';
-import GamingMonitors from './Components/Gamingmonitors';
+import GamingMonitors from './Components/GamingMonitors';
 import GamingMonitorSlider from './Components/GamingmonitorSlider';
 import GamingLaptop from './Components/GamingLaptop';
 import Login from './Components/Login';
