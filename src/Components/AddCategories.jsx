@@ -40,7 +40,7 @@ function AddCategories({ goBack, onProductAdded }) {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/AddCategories", formData);
+      const res = await axios.post("https://nvidia-backend-xi.vercel.app/AddCategories", formData);
       if (res.data.success) {
         Swal.fire("Success", "Product added successfully!", "success");
 

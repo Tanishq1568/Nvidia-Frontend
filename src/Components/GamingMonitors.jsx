@@ -8,7 +8,7 @@ function GamingMonitors() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:8000/AddCategories")
+    axios.get("https://nvidia-backend-xi.vercel.app/AddCategories")
       .then((res) => {
         if (res.data.success) {
           const filtered = res.data.products.filter(

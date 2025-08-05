@@ -15,7 +15,7 @@ function ProductDetails() {
 
    const handleAddToCart = async () => {
     try {
-        const response = await axios.post("http://localhost:8000/cart", {
+        const response = await axios.post("https://nvidia-backend-xi.vercel.app/cart", {
             name: product.name,
             price: product.price,
             quantity: 1, 

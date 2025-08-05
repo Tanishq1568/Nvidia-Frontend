@@ -32,7 +32,7 @@ function ForgotPassword() {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/forgotpassword", {
+      const res = await axios.post("https://nvidia-backend-xi.vercel.app/forgotpassword", {
         email,
         password,
       });

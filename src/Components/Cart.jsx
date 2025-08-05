@@ -12,7 +12,7 @@ function Cart() {
 
   const fetchCart = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/cart");
+      const response = await axios.get("https://nvidia-backend-xi.vercel.app/cart");
       setCartItems(response.data);
     } catch (error) {
       console.error("Failed to fetch cart items:", error);
@@ -21,7 +21,7 @@ function Cart() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/cart/${id}`);
+      await axios.delete(`https://nvidia-backend-xi.vercel.app/cart/${id}`);
       setCartItems(prev => prev.filter(item => item._id !== id));
     } catch (error) {
       console.error("Delete error:", error);
@@ -31,7 +31,7 @@ function Cart() {
   const handleCheckout = async () => {
     try {
       alert("Order placed successfully!");
-      await axios.delete("http://localhost:8000/cart"); // Clear cart after order
+      await axios.delete("https://nvidia-backend-xi.vercel.app/cart"); // Clear cart after order
       setCartItems([]);
     } catch (error) {
       console.error("Checkout error:", error);

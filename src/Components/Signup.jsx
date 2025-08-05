@@ -22,7 +22,7 @@ function Signup() {
   };
 
   const allusers = () => {
-    axios.get('http://localhost:8000/allusers')
+    axios.get('https://nvidia-backend-xi.vercel.app/allusers')
       .then((res) => {
         if (res.data.status) {
           setgetuser(res.data.ouruser);
@@ -60,7 +60,7 @@ function Signup() {
       });
       go("/loginuser");
     } else {
-      axios.post("http://localhost:8000/signup", signupdata)
+      axios.post("https://nvidia-backend-xi.vercel.app/signup", signupdata)
         .then((res) => {
           if (res.data.status) {
             Swal.fire({
