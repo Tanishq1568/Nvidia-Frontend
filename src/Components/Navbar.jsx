@@ -97,7 +97,7 @@ function Navbar() {
                   <a className="nav-link text-white fs-4" href="/">GeForce</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/">Home</a>
+                  <Link className="nav-link text-white" to="/">Home</Link>
                 </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,7 +121,7 @@ function Navbar() {
                   </a>
 
                   <ul className="dropdown-menu bg-white">
-                    <li><a className="dropdown-item text-dark" href="/loginuser">Login User</a></li>
+                    <li><Link className="dropdown-item text-dark" to="/loginuser">Login User</Link></li>
                     <li><Link className="dropdown-item text-dark" to="/signup">SignUp</Link> </li>
                     <li><a className="dropdown-item text-dark" href="/forgotpassword">Forgot Password</a> </li>
 
