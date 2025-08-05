@@ -5,7 +5,7 @@ import { Button, ButtonToolbar } from 'rsuite';
 import cart from "../images/cartlogo.png";
 import wishlist from "../images/wishlistlogo.png"
 import { COLOR } from 'rsuite/esm/internals/constants';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
   let go = useNavigate()
@@ -122,7 +122,7 @@ function Navbar() {
 
                   <ul className="dropdown-menu bg-white">
                     <li><a className="dropdown-item text-dark" href="/loginuser">Login User</a></li>
-                    <li><a className="dropdown-item text-dark" href="/signup">SignUp</a> </li>
+                    <li><Link className="dropdown-item text-dark" to="/signup">SignUp</Link> </li>
                     <li><a className="dropdown-item text-dark" href="/forgotpassword">Forgot Password</a> </li>
 
 
