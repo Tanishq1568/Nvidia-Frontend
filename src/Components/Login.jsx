@@ -31,7 +31,7 @@ function Login() {
       return;
     }
 
-    axios.post("https://nvidia-backend-xi.vercel.app/loginuser", logindata)
+    axios.post(`${apiUrl}/loginuser`, logindata)
       .then((res) => {
         if (res.data.status) {
           Swal.fire({
