@@ -1,3 +1,6 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
+
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Signin.css';
@@ -22,7 +25,8 @@ function Signup() {
   };
 
   const allusers = () => {
-    axios.get('https://nvidia-backend-xi.vercel.app/allusers')
+    axios.get(`${apiUrl}/allusers`)
+
       .then((res) => {
         if (res.data.status) {
           setgetuser(res.data.ouruser);
