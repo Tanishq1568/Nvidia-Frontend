@@ -64,7 +64,7 @@ function Signup() {
       });
       go("/loginuser");
     } else {
-      axios.post("https://nvidia-backend-xi.vercel.app/signup", signupdata)
+      axios.post(`${apiUrl}/signup`, signupdata)
         .then((res) => {
           if (res.data.status) {
             Swal.fire({
