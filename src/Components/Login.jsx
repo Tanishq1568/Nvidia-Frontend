@@ -1,3 +1,4 @@
+const apiUrl = import.meta.env.VITE_API_URL;
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../css/Signin.css";
