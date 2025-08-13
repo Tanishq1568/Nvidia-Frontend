@@ -1,3 +1,5 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -8,7 +10,7 @@ function GamingLaptop() {
   const navigate = useNavigate();
 
   const fetchLaptops = () => {
-    axios.get("https://nvidia-backend-xi.vercel.app/AddCategories")
+    axios.get(`${apiUrl}/AddCategories`)
       .then((res) => {
         if (res.data.success) {
           const filtered = res.data.products.filter(

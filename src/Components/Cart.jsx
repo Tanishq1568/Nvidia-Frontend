@@ -1,3 +1,6 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +15,7 @@ function Cart() {
 
   const fetchCart = async () => {
     try {
-      const response = await axios.get("https://nvidia-backend-xi.vercel.app/cart");
+      const response = await axios.get(`${apiUrl}/cart`);
       setCartItems(response.data);
     } catch (error) {
       console.error("Failed to fetch cart items:", error);
@@ -21,7 +24,7 @@ function Cart() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://nvidia-backend-xi.vercel.app/cart/${id}`);
+      await axios.delete(`${apiUrl}/cart/${id}`);
       setCartItems(prev => prev.filter(item => item._id !== id));
     } catch (error) {
       console.error("Delete error:", error);
@@ -31,7 +34,7 @@ function Cart() {
   const handleCheckout = async () => {
     try {
       alert("Order placed successfully!");
-      await axios.delete("https://nvidia-backend-xi.vercel.app/cart"); // Clear cart after order
+      await axios.delete(`${apiUrl}/cart`); // Clear cart after order
       setCartItems([]);
     } catch (error) {
       console.error("Checkout error:", error);

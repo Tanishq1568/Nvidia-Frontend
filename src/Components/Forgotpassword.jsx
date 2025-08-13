@@ -1,3 +1,5 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Signin.css';
@@ -32,7 +34,7 @@ function ForgotPassword() {
     }
 
     try {
-      const res = await axios.post("https://nvidia-backend-xi.vercel.app/forgotpassword", {
+      const res = await axios.post(`${apiUrl}/forgotpassword`, {
         email,
         password,
       });

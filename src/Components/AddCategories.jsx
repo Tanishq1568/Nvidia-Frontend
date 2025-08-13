@@ -1,3 +1,5 @@
+const apiUrl = import.meta.env.VITE_API_URL;
+
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
@@ -40,10 +42,10 @@ function AddCategories({ goBack, onProductAdded }) {
     }
 
     try {
-      const res = await axios.post("https://nvidia-backend-a5ft.vercel.app//AddCategories", formData);
+      const res = await axios.post(`${apiUrl}/AddCategories`,formData)
       if (res.data.success) {
         Swal.fire("Success", "Product added successfully!", "success");
-
+ axios.get(`${apiUrl}/allusers`)
         if (onProductAdded) {
           onProductAdded();
         }
