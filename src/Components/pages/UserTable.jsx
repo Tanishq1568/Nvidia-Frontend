@@ -15,7 +15,7 @@ function UserTable() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("https://nvidia-backend-xi.vercel.app/signup" );
+      const res = await axios.get(`${apiUrl}/signup` );
       // Ensure response is array
       if (Array.isArray(res.data)) {
         setUsers(res.data);
@@ -32,7 +32,7 @@ function UserTable() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://nvidia-backend-xi.vercel.app/signup/${id}`);
+      await axios.delete(`${apiUrl}/signup/${id}`);
       fetchUsers(); // Refresh after deletion
     } catch (error) {
       console.error("Error deleting user:", error);

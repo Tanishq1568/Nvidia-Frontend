@@ -6,7 +6,7 @@ function SavedReview() {
   const [allReviews, setAllReviews] = useState([]);
 
   const fetchReviews = () => {
-    axios.get("https://nvidia-backend-xi.vercel.app/reviews").then((res) => {
+    axios.get(`${apiUrl}/reviews`).then((res) => {
       setAllReviews(res.data);
     });
   };
@@ -17,7 +17,7 @@ function SavedReview() {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this review?")) {
-      await axios.delete(`https://nvidia-backend-xi.vercel.app/reviews/${id}`);
+      await axios.delete(`${apiUrl}/reviews/${id}`);
       fetchReviews(); // refresh reviews
     }
   };

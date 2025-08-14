@@ -9,7 +9,7 @@ function ReviewPage({ productId }) {
   // Fetch reviews only for the current product
   const fetchReviews = async () => {
     try {
-      const res = await axios.get(`https://nvidia-backend-xi.vercel.app/reviews?productId=${productId}`);
+      const res = await axios.get(`${apiUrl}/reviews?productId=${productId}`);
       setReviews(res.data);
     } catch (err) {
       console.error("Error fetching reviews:", err);
@@ -31,7 +31,7 @@ function ReviewPage({ productId }) {
     }
 
     try {
-      await axios.post("https://nvidia-backend-xi.vercel.app/reviews", {
+      await axios.post(`${apiUrl}/reviews`, {
         ...form,
         productId,
       });

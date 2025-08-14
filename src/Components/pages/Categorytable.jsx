@@ -15,7 +15,7 @@ function CategoryTable({ reloadFlag }) {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("https://nvidia-backend-xi.vercel.app/Addcategories");
+      const res = await axios.get(`${apiUrl}/AddCategories`);
       setProducts(res.data.products || []);
       setCurrentPage(1);
     } catch (error) {
@@ -36,7 +36,7 @@ function CategoryTable({ reloadFlag }) {
 
     if (confirm.isConfirmed) {
       try {
-        await axios.delete(`https://nvidia-backend-xi.vercel.app/deleteCategor/${id}`);
+        await axios.delete(`${apiUrl}/deleteCategor/${id}`);
         Swal.fire("Deleted!", "Category has been deleted.", "success");
         fetchProducts();
       } catch (error) {
