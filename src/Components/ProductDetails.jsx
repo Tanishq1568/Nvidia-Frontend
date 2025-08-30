@@ -14,6 +14,21 @@ function ProductDetails() {
         return <div className="text-center mt-5">No product data available.</div>;
     }
 
+
+      const handleAddToWishlist = async () => {
+    try {
+        const response = await axios.post(`${apiUrl}/wishlist`, {
+            name: product.name,
+            price: product.price,
+            quantity: 1, 
+            image: product.image 
+        });
+        alert("Product added to cart!");
+    } catch (error) {
+        console.error("Add to cart failed:", error);
+        alert("Failed to add product to cart.");
+    }
+};
    const handleAddToCart = async () => {
     try {
         const response = await axios.post(`${apiUrl}/cart`, {
@@ -61,6 +76,9 @@ function ProductDetails() {
                     <div className="mt-4 d-flex gap-3">
                         <button className="btn btn-warning" onClick={handleAddToCart}>
                             Add to Cart
+                        </button>
+                        <button className="btn btn-warning" onClick={handleAddToWishlist}>
+                            Wishlist
                         </button>
                         <button className="btn btn-success">
                             Buy Now

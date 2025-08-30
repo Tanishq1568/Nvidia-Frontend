@@ -155,7 +155,7 @@ function Navbar() {
               {/* RIGHT BUTTONS */}
               <div className="d-flex align-items-center mt-2 mt-lg-0">
                 <ButtonToolbar>
-                  <Button
+                  <Button onClick={()=>go('/wishlist')}
                     appearance="default"
                     startIcon={<img src={wishlist} alt="Wishlist" style={{ width: 20, height: 20 }} />}
                   >

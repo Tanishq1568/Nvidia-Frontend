@@ -27,6 +27,7 @@ import Cart from './Components/Cart';
 import ReviewPage from './Components/pages/ReviewPage';
 import GamingPC from './Components/GamingPC';
 import GraphicCard from './Components/GraphicCard';
+import Wishlist from './Components/Wishlist';
 
 function AppContent() {
   const location = useLocation();
@@ -73,6 +74,8 @@ function AppContent() {
 
         <Route path="/gaminglaptop" element={<GamingLaptop />} />
         <Route path="/productdetails" element={<ProductDetails/>} />
+        <Route path="/wishlist" element={<Wishlist/>} />
+
 
         
 
